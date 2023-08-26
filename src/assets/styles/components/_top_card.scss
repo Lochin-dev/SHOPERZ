@@ -1,0 +1,92 @@
+@import "../base/mixins";
+.top_section {
+  background: var(--grey-100, #eef0f4);
+  padding: 10px 0 40px 0;
+}
+
+.flex {
+  @include flexLayout(flex, center, center, 20px, wrap);
+}
+
+.top {
+  &_title {
+    color: var(--grey-900, #1d232c);
+    font-size: 24px;
+    font-weight: 500;
+  }
+  &_wrapper {
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--grey-100, #eef0f4);
+    background: var(--white, #fff);
+    padding: 20px;
+    display: flex;
+    &:hover {
+      transition: all 0.2s ease-in;
+      -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    }
+    &-wrap {
+      width: 286px;
+      &--description {
+        color: var(--primary-700, #0077e4);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      &--div {
+        padding-top: 15px;
+        @include flexLayout(flex, space-between, center, default);
+        &_price {
+          padding: 7px 0;
+          color: var(--grey-900, #1d232c);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        &_icon {
+          border: none;
+          display: flex;
+          width: 36px;
+          height: 36px;
+          justify-content: center;
+          align-items: center;
+          gap: 6px;
+          flex-shrink: 0;
+          border-radius: 20px;
+          background: var(--grey-200, #dde1e8);
+          &:active {
+            background: #0077e4;
+          }
+        }
+      }
+    }
+  }
+}
+.top_hr {
+  width: 134px;
+  color: #0077e4;
+  height: 3px;
+  background: #0084ff;
+  border-radius: 4px;
+}
+.wrap_price {
+  color: var(--danger-600, #ff316a);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  &__old {
+    color: var(--grey-900, #1d232c);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: line-through;
+  }
+}

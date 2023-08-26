@@ -1,0 +1,34 @@
+.tabs {
+  padding-top: 30px;
+}
+
+.taps_div {
+  display: flex;
+  padding: 40px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+  border-radius: 0px 6px 6px 6px;
+  border: 1px solid var(--grey-100, #eef0f4);
+  background: var(--white, #fff);
+}
+
+.tabs_title {
+  color: var(--grey-900, #1d232c);
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.tabs_text {
+  color: var(--grey-700, #586a84);
+  /* Roboto 14px/Roboto_regular_14px */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

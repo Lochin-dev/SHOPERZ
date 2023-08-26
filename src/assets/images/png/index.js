@@ -1,0 +1,6 @@
+export { default as iphone } from './prodcut_photos.png'
+export { default as televizor } from './category_photos.png'
+export { default as muzlatgich } from './prodcut_muzlatgich.png'
+export { default as banner_img } from './banner_img.png'
+export { default as bannerimg } from './bannerimg.png'
+export { default as bundles } from './bundles.png'

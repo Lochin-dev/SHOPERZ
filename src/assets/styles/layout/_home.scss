@@ -1,0 +1,152 @@
+@import "../base/mixins";
+.produc {
+  padding-bottom: 60px;
+  width: 100%;
+  scroll-behavior: auto;
+  @include flexLayout(flex, space-between, center, 20px, wrap);
+}
+
+.produc_section__title {
+  color: var(--grey-900, #1d232c);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  &-hr {
+    color: rgb(0, 0, 255);
+    height: 10px;
+    width: 198px;
+  }
+}
+
+.categorie_section {
+  padding: 30px 0;
+  background: var(--grey-100, #eef0f4);
+}
+
+.categories {
+  width: 100%;
+  @include flexLayout(flex, space-between, center, 20px, wrap);
+}
+
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.banner_card {
+  text-align: center;
+  padding: 40px 0;
+  @include flexLayout(flex, space-between, center, 30px, wrap);
+
+  &__one {
+    min-height: 200px;
+    @include flexLayout(flex, space-between, center, 20px, wrap);
+    border-radius: 6px;
+    background: linear-gradient(225deg, #f2fff7 0%, #c3f4ff 100%);
+    padding: 43px 10px 30px 60px;
+
+    &--title {
+      max-width: 320px;
+      color: var(--grey-900, #1d232c);
+      font-family: Roboto;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+  }
+
+  &__two {
+    min-height: 200px;
+    @include flexLayout(flex, space-between, center, 20px, wrap);
+    border-radius: 6px;
+    background: var(
+      --pale-gradient-purple,
+      linear-gradient(225deg, #fff4fd 0%, #cbcdff 100%)
+    );
+    padding: 31px 42px 30px 60px;
+
+    &--title {
+      max-width: 320px;
+      color: var(--grey-900, #1d232c);
+      font-family: Roboto;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+  }
+}
+
+@include mediaQueries("1440px") {
+  .banner_card {
+    &__one {
+      min-height: 200px;
+      padding: 26px 0px 26px 20px;
+
+      &--title {
+        font-size: 25px;
+      }
+    }
+
+    &__two {
+      min-height: 200px;
+      padding: 20px 22px 20px 20px;
+
+      &--title {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@include mediaQueries("1330px") {
+  .banner_card {
+    @include flexLayout(flex, center, center, 20px, default);
+
+    &__one {
+      @include flexLayout(flex, center, center, 20px, default);
+
+      min-height: 200px;
+      padding: 16px 0px 16px 10px;
+
+      &--title {
+        font-size: 20px;
+      }
+    }
+
+    &__two {
+      @include flexLayout(flex, center, center, 20px, default);
+
+      min-height: 200px;
+      padding: 10px 10px 10px 50px;
+
+      &--title {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.reklama_section {
+  @include flexLayout(flex, center, center, 0, default);
+}
+
+.reklama {
+  padding: 50px 0;
+  @include flexLayout(flex, space-between, center, 110px, wrap);
+}

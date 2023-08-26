@@ -1,0 +1,119 @@
+@import "../base/mixins";
+
+.products {
+  border-radius: 6px;
+  border: 1px solid var(--grey-100, #eef0f4);
+  background: var(--white, #fff);
+  padding: 20px;
+  width: 18%;
+  &:hover {
+    transition: all 0.2s ease-in;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+  &_title {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &_disc {
+    color: var(--primary-700, #0077e4);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &_wrapper {
+    padding-top: 15px;
+    width: 100%;
+    @include flexLayout(flex, space-between, center, default, default);
+
+    &__old {
+      margin: 0;
+      color: var(--grey-900, #1d232c);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &__btn1 {
+      display: flex;
+      width: 36px;
+      height: 36px;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      border: none;
+      border-radius: 20px;
+      background: var(--grey-200, #dde1e8);
+    }
+    &__btn2 {
+      display: flex;
+      width: 36px;
+      height: 36px;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      border: none;
+      border-radius: 20px;
+      background: var(--grey-200, #3e85ff);
+    }
+  }
+}
+
+// =====================================================
+
+.btn-lock {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: var(--grey-200, #dde1e8);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#inpLock {
+  display: none;
+}
+
+#inpLock:checked + label {
+  background: #0077e4;
+}
+
+@media screen and (max-width: 1000px) {
+  .products {
+    width: 23%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .products {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .products {
+    width: 45%;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .products {
+    width: 100%;
+    padding: 10px;
+  }
+}
